@@ -1,4 +1,5 @@
 import NavBar from "../../components/NavBar/NavBar";
+import { Link } from "react-router-dom";
 
 function SignIn() {
     return (
@@ -10,7 +11,7 @@ function SignIn() {
                     <input type="text" placeholder="Username"/>
                     <input type="password" placeholder="Password"/>
                     <button type="submit">Sign in</button>
-                    <p className="sign-up-option">Don't have an account? <a href="/signup">Sign up here!</a></p>
+                    <p className="sign-up-option">Don't have an account? <Link to="/signup">Sign up here!</Link></p>
                 </form>
             </div>
         </div>
