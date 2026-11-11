@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBar";
-import ProductCard from "../../components/ProductCard";
+import NavBar from "../../components/NavBar/NavBar";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 function CategoryLayout() {
     return (

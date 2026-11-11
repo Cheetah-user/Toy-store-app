@@ -1,5 +1,5 @@
 //This should show the details of a product when a user clicks on it from the home page.
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 
 function ProductDetail() {
     return (

@@ -1,6 +1,6 @@
-import NavBar from "../../components/NavBar";
-import CheckoutForm from "../../components/CheckoutForm";
-import CartTotal from "../../components/CartTotal";
+import NavBar from "../../components/NavBar/NavBar";
+import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
+import CartTotal from "../../components/CartTotal/CartTotal";
 
 function Checkout() {
     return (

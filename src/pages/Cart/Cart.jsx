@@ -1,6 +1,6 @@
-import NavBar from "../../components/NavBar";
-import CartItemsList from "../../components/CartItemsList";
-import CartTotal from "../../components/CartTotal";
+import NavBar from "../../components/NavBar/NavBar";
+import CartItemsList from "../../components/CartItemsList/CartItemsList";
+import CartTotal from "../../components/CartTotal/CartTotal";
 
 function Cart() {
     return (
