@@ -1,5 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import "./Home.css"
 
 function Home() {
     return (
