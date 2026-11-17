@@ -4,9 +4,9 @@ import CartTotal from "../../components/CartTotal/CartTotal";
 
 function Checkout() {
     return (
-        <div className="checkout-container">
+        <div className="checkout-details-page">
             <NavBar />
-            <div className="grid-checkout-details">
+            <div className="grid-cart-checkout-details">
                 <CheckoutForm/>
                 <CartTotal/>
             </div>
