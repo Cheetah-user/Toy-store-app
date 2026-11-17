@@ -1,4 +1,6 @@
 //Should keep track of items user adds to the cart and display them in the cart page.
+import "./CartItemsList.css";
+
 function CartItemsList(){
     return (
         <div className="cart-item-list">
