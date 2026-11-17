@@ -1,3 +1,5 @@
+import "./CheckoutForm.css";
+
 function CheckoutForm() {
     return (
         <div className="checkout-form-container">

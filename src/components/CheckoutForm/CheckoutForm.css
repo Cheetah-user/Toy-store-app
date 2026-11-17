@@ -1,0 +1,15 @@
+.checkout-form-container {
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.checkout-form-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkout-form-container h2 {
+    margin-bottom: 20px;
+}
