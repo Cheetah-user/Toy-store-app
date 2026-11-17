@@ -1,11 +1,12 @@
 import NavBar from "../../components/NavBar/NavBar";
 import { Link } from "react-router-dom";
+import "./SignIn.css";
 
 function SignIn() {
     return (
         <div className="sign-in-container">
             <NavBar />
-            <div className="sign-in-form">
+            <div className="auth-card">
                 <h2>The Toy Store</h2>
                 <form>
                     <input type="text" placeholder="Username"/>
