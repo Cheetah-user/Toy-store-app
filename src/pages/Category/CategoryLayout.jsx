@@ -5,7 +5,7 @@ function CategoryLayout() {
     return (
         <div className="category-container">
             <NavBar />
-            <div className="category-page-banner">
+            <div className="page-banner">
                 <h1>Category Name</h1>
                 <p>Category Description</p>
             </div>

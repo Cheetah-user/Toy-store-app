@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className="home-page-container">
             <NavBar />
-            <div className="home-page-banner">
+            <div className="page-banner">
                 <h1>The Toy Store</h1>
                 <p>Find your child's forever friend!</p>
             </div>
