@@ -1,4 +1,6 @@
 //This will keep tract of the total price of all items in cart and display it.
+import "./CartTotal.css";
+
 function CartTotal(){
     return (
         <div className="cart-total-container">
