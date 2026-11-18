@@ -1,5 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import { mockToys } from "../../data/mockToys";
 import "./Home.css"
 
 function Home() {
@@ -11,9 +12,9 @@ function Home() {
                 <p>Find your child's forever friend!</p>
             </div>
             <div className="products-containers">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {mockToys.map((toy) => (
+                    <ProductCard key={toy.id} toy={toy}/>
+                ))}
             </div>
 
         </div>
