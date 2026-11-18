@@ -1,0 +1,14 @@
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.product-details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
