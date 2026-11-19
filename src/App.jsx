@@ -26,9 +26,9 @@ function App() {
           <NavBar cart={cart}/>
           <Routes> 
             <Route path='/' element={<Home/>}/>
-            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/cart' element={<Cart cart = {cart}/>}/>
             <Route path='/category/:name' element={<CategoryLayout/>}/>
-            <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='/checkout' element={<Checkout cart = {cart}/>}/>
             <Route path='/product/:id' element={<ProductDetail addToCart={addToCart}/>}/>
             <Route path='/signin' element={<SignIn/>}/>
             <Route path='/signup' element={<SignUp/>}/>
