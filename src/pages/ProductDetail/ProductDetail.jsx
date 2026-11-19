@@ -1,5 +1,4 @@
 //This should show the details of a product when a user clicks on it from the home page.
-import NavBar from "../../components/NavBar/NavBar";
 import { mockToys } from "../../data/mockToys";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
@@ -10,7 +9,6 @@ function ProductDetail({addToCart}) {
     if(!toy) return <h2>Toy not found!</h2>
     return (
         <div className="productdetail-container">
-            <NavBar />
             <div className="product-details">
                 <img src={toy.image} alt={toy.name}/>
                 <div className="product-details-info">

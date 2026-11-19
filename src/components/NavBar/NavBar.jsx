@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { use, useState } from "react";
+import { useState } from "react";
 import './NavBar.css';
 
-function NavBar(){
+function NavBar({cart = []}){
     const [isDropdown, setIsDropdown] = useState(false);
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
     return (
         <nav className="nav-bar">
             <div className="toy-store-logo">
@@ -22,7 +23,7 @@ function NavBar(){
                     )}
                 </div>
                 <Link to="/">About Us</Link>
-                <Link to="/cart">🛒 Cart (0)</Link>
+                <Link to="/cart">🛒 Cart ({totalItems})</Link>
                 <Link to="/signin">Sign In</Link>
                 <Link to="/signup">Sign Up</Link>
             </div>

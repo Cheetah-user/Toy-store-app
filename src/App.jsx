@@ -9,6 +9,7 @@ import Checkout from './pages/Checkout/Checkout';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
     const [cart, setCart] = useState([]);
@@ -22,6 +23,7 @@ function App() {
     }
     return (
         <BrowserRouter>
+          <NavBar cart={cart}/>
           <Routes> 
             <Route path='/' element={<Home/>}/>
             <Route path='/cart' element={<Cart/>}/>
