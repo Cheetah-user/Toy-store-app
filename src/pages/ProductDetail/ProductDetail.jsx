@@ -4,7 +4,7 @@ import { mockToys } from "../../data/mockToys";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
 
-function ProductDetail() {
+function ProductDetail({addToCart}) {
     const { id } = useParams();
     const toy = mockToys.find((item) => item.id === Number(id));
     if(!toy) return <h2>Toy not found!</h2>
@@ -17,7 +17,7 @@ function ProductDetail() {
                    <h2>{toy.name}</h2>
                    <p>{toy.description}</p>
                    <p>Price: ${toy.price}</p>
-                   <button disabled= {toy.stock === 0}> Add To Cart</button>
+                   <button onClick={() => addToCart(toy)} disabled= {toy.stock === 0}> Add To Cart</button>
                    {toy.stock === 0 && (
                     <p className="out-of-stock-msg">Sorry! This item is out of stock.</p>
                    )}
