@@ -16,7 +16,7 @@ function SignUp() {
           return;
         }else{
             setError('');
-            console.log('Submitted');
+            console.log('Submitted'); /*To see whether it works */
         }
     }
     return (
