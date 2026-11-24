@@ -23,17 +23,17 @@ function App() {
       }
     };
     
-    /* */
+    /*Removes items from the cart*/
     function removeFromCart(toyId) {
       setCart(cart.filter((item) => item.id !== toyId))
     }
 
-    /* */
+    /*Increases amount of items in cart*/
     function increaseQuantity(toyId) {
       setCart(cart.map((item) => item.id === toyId ? {...item, quantity: item.quantity + 1} : item))
     }
 
-    /* */
+    /*Decreases amount of items in cart */
     function decreaseQuantity(toyId) {
       const existingToy = cart.find((item) => item.id === toyId);
       if(existingToy.quantity === 1){
@@ -44,6 +44,11 @@ function App() {
 
     }
 
+    /*Should Clear the cart icon when user completes a purchase in the checkout page */
+    function clearCart(){
+      setCart([]);
+    }
+
     return (
         <BrowserRouter>
           <NavBar cart={cart}/>
@@ -51,7 +56,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/cart' element={<Cart cart = {cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} removeFromCart={removeFromCart}/>}/>
             <Route path='/category/:name' element={<CategoryLayout/>}/>
-            <Route path='/checkout' element={<Checkout cart = {cart}/>}/>
+            <Route path='/checkout' element={<Checkout cart = {cart} clearCart={clearCart}/>}/>
             <Route path='/product/:id' element={<ProductDetail addToCart={addToCart}/>}/>
             <Route path='/signin' element={<SignIn/>}/>
             <Route path='/signup' element={<SignUp/>}/>

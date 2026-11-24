@@ -1,7 +1,7 @@
 import "./CheckoutForm.css";
 import { useState } from "react";
 
-function CheckoutForm() {
+function CheckoutForm({clearCart}) {
     const [isAddress, setIsAddress] = useState('');
     const [isCountry, setIsCountry] = useState('');
     const [isZip, setIsZip] = useState('');
@@ -11,6 +11,7 @@ function CheckoutForm() {
     function handleOrder(e){
       e.preventDefault();
       setOrderSubmitted(true);
+      clearCart();
     }
     return (
         <div className="checkout-form-container">
