@@ -4,7 +4,7 @@
     border-radius: 8px;
 }
 
-.checkout-form-details {
+#checkout-form{
     display: flex;
     flex-direction: column;
     gap: 15px;
