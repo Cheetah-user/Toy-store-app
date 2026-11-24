@@ -18,7 +18,9 @@ function NavBar({cart = []}){
                     </button>
                     {isDropdown && (
                         <div className="dropdown-menu">
-                            <Link to="/category/dolls">Dolls</Link> /* A test category link */ 
+                            <Link to="/category/dolls">Dolls</Link> 
+                            <Link to="/category/stuffed-animals">Stuffed Animals</Link> 
+                            <Link to="/category/vehicles">Vehicles</Link> 
                         </div>
                     )}
                 </div>
