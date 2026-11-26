@@ -1,0 +1,41 @@
+CREATE TABLE category(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  description VARCHAR(200) NOT NULL,
+  image TEXT NOT NULL
+);
+
+CREATE TABLE toy(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  category_id INTEGER REFERENCES category(id),
+  price DECIMAL(10, 2) NOT NULL,
+  stock INTEGER NOT NULL,
+  description VARCHAR(200) NOT NULL,
+  image TEXT NOT NULL
+);
+
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(150) UNIQUE NOT NULL,
+  email VARCHAR(150) UNIQUE NOT NULL,
+  password VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE checkout(
+  id SERIAL PRIMARY KEY,
+  address VARCHAR(150) NOT NULL,
+  country VARCHAR(150) NOT NULL,
+  zip VARCHAR(20) NOT NULL,
+  order_method VARCHAR(50) NOT NULL,
+  order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  total_price DECIMAL(10, 2) NOT NULL,
+  user_id INTEGER REFERENCES users(id)
+);
+
+CREATE TABLE checked_out_toy(
+  id SERIAL PRIMARY KEY,
+  toy_id INTEGER REFERENCES toy(id),
+  checkout_id INTEGER REFERENCES checkout(id),
+  quantity INTEGER NOT NULL
+);
